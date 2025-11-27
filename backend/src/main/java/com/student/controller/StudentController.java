@@ -16,8 +16,9 @@ public class StudentController {
 
     // 1. 查询所有学生：GET /api/students
     @GetMapping
-    public List<Student> list() {
-        return studentService.list();
+    public List<Student> list(@RequestParam(required = false) String name,
+                              @RequestParam(required = false) String gender) {
+        return studentService.list(name, gender);
     }
 
     // 2. 按 id 查询：GET /api/students/{id}
