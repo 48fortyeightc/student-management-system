@@ -1,7 +1,7 @@
 import request from "./request";
 
-export function getTeachers() {
-  return request.get("/teachers")
+export function getTeachers(params = {}) {
+  return request.get("/teachers", { params })
 }
 
 export function addTeacher(data) {

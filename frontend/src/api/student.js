@@ -1,7 +1,7 @@
 import request from "./request";
 
-export function getStudents() {
-  return request.get("/students")
+export function getStudents(params = {}) {
+  return request.get("/students", { params })
 }
 
 export function addStudent(data) {
